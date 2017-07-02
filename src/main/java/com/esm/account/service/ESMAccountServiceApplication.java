@@ -6,9 +6,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 @SpringBootApplication
 @EnableResourceServer
-public class EsmAccountServiceApplication {
+public class ESMAccountServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EsmAccountServiceApplication.class, args);
+		SpringApplication.run(ESMAccountServiceApplication.class, args);
 	}
 }
