@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountResource {
 
 	@GetMapping("/message")
-	@PreAuthorize("#oauth2.hasScope('employee_read') and hasAuthority('ROLE_OPERATOR')")
+	@PreAuthorize("#oauth2.hasScope('read') and hasAuthority('ROLE_ACTUATOR')")
 	public String message(){
 		return "Welcome to OAuth2.0";
 	}

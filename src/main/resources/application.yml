@@ -4,21 +4,26 @@ server:
   
 security:
   oauth2:
+    client:
+      access-token-uri: http://localhost:9999/oauth2/services/oauth/token
+      user-authorization-uri: http://localhost:9999/oauth2/services/oauth/authorize
+      client-id: commandlineinterface
+      client-secret: commandlineinterface
     resource:
-      user-info-uri: http://localhost:8888/services/user
-
+      user-info-uri: http://localhost:9999/oauth2/services/user
+      
 spring:
   application:
     name: account-service
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
   zipkin:
-    base-url: http://localhost:8080
+    base-url: http://localhost:7777
   sleuth:
     sampler:
       percentage: 1.0
-    
+      
 logging:
   level:
     org.springframework.web: DEBUG
