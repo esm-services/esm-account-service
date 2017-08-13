@@ -15,6 +15,11 @@ security:
 spring:
   application:
     name: account-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ACCOUNT_DB
+    username: rdurgesh
+    password: rdurgesh
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: validate
