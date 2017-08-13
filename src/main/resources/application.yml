@@ -5,12 +5,12 @@ server:
 security:
   oauth2:
     client:
-      access-token-uri: http://localhost:9999/oauth2/services/oauth/token
-      user-authorization-uri: http://localhost:9999/oauth2/services/oauth/authorize
+      access-token-uri: http://localhost:9999/spring-security-oauth-server/oauth/token
+      user-authorization-uri: http://localhost:9999/spring-security-oauth-server/oauth/authorize
       client-id: commandlineinterface
       client-secret: commandlineinterface
     resource:
-      user-info-uri: http://localhost:9999/oauth2/services/user
+      user-info-uri: http://localhost:9999/spring-security-oauth-server/user
       
 spring:
   application:

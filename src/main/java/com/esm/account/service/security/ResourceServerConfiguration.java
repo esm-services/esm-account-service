@@ -19,5 +19,4 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
 		super.configure(resources);
 	}
-
 }
