@@ -1,13 +1,16 @@
 spring:
+  application:
+    name: account-service
   profiles:
     active:
-    - prod
+    - dev
   cloud:
     config:
-      uri: http://localhost:8888
+      discovery:
+        enabled: true
       username: config-server
       password: config-server
-      fail-fast: false
+      fail-fast: true
       
 encrypt:
   key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
