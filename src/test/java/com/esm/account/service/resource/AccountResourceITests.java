@@ -2,7 +2,6 @@ package com.esm.account.service.resource;
 
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -21,7 +20,7 @@ import com.esm.account.service.security.WithMockCustomUser;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class AccountResourceITests{
+public class AccountResourceITests {
 
 	@Autowired
 	private WebApplicationContext context;
@@ -30,7 +29,7 @@ public class AccountResourceITests{
 
 	@Before
 	public void setup() {
-		mockMvc = MockMvcBuilders.webAppContextSetup(context).apply(springSecurity()).alwaysDo(print()).build();
+		mockMvc = MockMvcBuilders.webAppContextSetup(context).apply(springSecurity()).build();
 	}
 
 	@Test
@@ -39,5 +38,3 @@ public class AccountResourceITests{
 		mockMvc.perform(get("/message")).andExpect(status().isOk()).andExpect(content().string("Welcome to OAuth2.0"));
 	}
 }
-
-
