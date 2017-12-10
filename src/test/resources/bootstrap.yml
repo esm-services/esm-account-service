@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: account-service
+  cloud:
+    consul:
+      enabled: false
+      discovery:
+        enabled: false
+  profiles:
+    active: test
